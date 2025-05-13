@@ -31,7 +31,7 @@ public class Scores_Chapter10 {
             int rowCnt = statement.executeUpdate(updateSql);
             System.out.println(rowCnt + "件のレコードが更新されました");
 
-            // データ取得のSQLクエリを準備（数学と英語の点数が高い順に並べる）
+            // データ取得のSQLクエリを準備
             String selectSql = "SELECT id, name, score_math, score_english FROM scores ORDER BY score_math DESC, score_english DESC;";
             System.out.println("データ取得を実行：" + selectSql);
             ResultSet result = statement.executeQuery(selectSql);
